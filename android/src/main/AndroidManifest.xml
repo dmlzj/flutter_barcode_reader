@@ -1,9 +1,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.yourcompany.barcodescan">
+  package="com.shengyun.barcodescan">
 
   <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
   <application>
-    <activity android:name="com.apptreesoftware.barcodescan.BarcodeScannerActivity" />
+    <activity android:name="com.apptreesoftware.barcodescan.Scanner_Activity"
+        android:theme="@style/Theme.AppCompat.NoActionBar"/>
   </application>
 </manifest>

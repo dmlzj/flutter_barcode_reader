@@ -34,7 +34,7 @@ class BarcodeScanPlugin(val activity: Activity): MethodCallHandler,
   }
 
   private fun showBarcodeView() {
-    val intent = Intent(activity, BarcodeScannerActivity::class.java)
+    val intent = Intent(activity, Scanner_Activity::class.java)
     activity.startActivityForResult(intent, 100)
   }
 
