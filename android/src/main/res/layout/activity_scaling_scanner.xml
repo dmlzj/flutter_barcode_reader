@@ -28,7 +28,7 @@
             android:layout_weight="1"
             android:text="扫一扫"
             android:gravity="center"
-            android:textSize="20sp"
+            android:textSize="16dp"
             android:textColor="#333333"/>
 
         <TextView
@@ -38,7 +38,7 @@
             android:layout_marginRight="10dp"
             android:text="相册"
             android:gravity="center"
-            android:textSize="16sp"
+            android:textSize="14dp"
             android:textColor="#333333"/>
 
     </LinearLayout>
