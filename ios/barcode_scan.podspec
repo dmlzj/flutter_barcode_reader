@@ -14,7 +14,7 @@ A new flutter plugin project.
   s.source           = { :path => '.' }
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
-  s.resources = ['Assets/*.png']
+  s.resources = 'Assets/*.png'
   s.dependency 'Flutter'
   s.dependency 'MTBBarcodeScanner'
   s.ios.deployment_target = '8.0'
