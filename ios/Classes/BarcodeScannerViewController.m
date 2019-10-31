@@ -13,7 +13,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"扫一扫";
+    self.navigationItem.title = @"扫一扫";
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:16]}];
     self.previewView = [[UIView alloc] initWithFrame:self.view.bounds];
     self.previewView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_previewView];
@@ -59,6 +60,7 @@
     [self.navigationItem setLeftBarButtonItems:[NSArray arrayWithObjects:leftflexSpacer,leftItem,nil]];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册"                                style:UIBarButtonItemStylePlain target:self action:@selector(toggle)];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
 }
 //打开相册
