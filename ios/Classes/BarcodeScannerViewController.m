@@ -50,16 +50,11 @@
 
 - (void)creatBarButton
 {
-    UIButton * backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    backBtn.frame = CGRectMake(0, 0, 44, 44);
-    [backBtn setImage:[UIImage imageNamed:@"backbutton"] forState:UIControlStateNormal];
-    [backBtn addTarget:self action:@selector(cancel) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem * leftItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
-    UIBarButtonItem * leftflexSpacer = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:self action:nil];
-    leftflexSpacer.width = -15;
-    [self.navigationItem setLeftBarButtonItems:[NSArray arrayWithObjects:leftflexSpacer,leftItem,nil]];
+     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
+       [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} forState:UIControlStateNormal];
+       self.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册"                                style:UIBarButtonItemStylePlain target:self action:@selector(toggle)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"相册" style:UIBarButtonItemStylePlain target:self action:@selector(toggle)];
     [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor blackColor];
 }
